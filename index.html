@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keshav Fitness Center</title>
+    <link rel="stylesheet" href="kes1.css">
+</head>
+<script>
+    function myfun(){
+        var a = document.getElementById("id1").value;
+        var b = document.getElementById("id2").value;
+        var c = document.getElementById("id3").value;
+        var d = document.getElementById("id4").value;
+        if (a == "") {
+            document.getElementById("msg1").innerHTML = "*";
+            alert("Enter your name first")
+            return false;
+        }else if(a!="" && b==""){
+            document.getElementById("msg2").innerHTML = "*";
+            alert("Enter your age first")
+        }else if(a!="" && b!="" && c==""){
+            document.getElementById("msg3").innerHTML = "*";
+            alert("Enter your gender first")
+        }else if(a!="" && b!="" && c!="" && d==""){
+            document.getElementById("msg4").innerHTML = "*";
+            alert("Enter your locality first")
+        }else{
+            alert("success")
+            return true;
+        }
+    }
+</script>
+<body>
+    <header class="main">
+        <div class="logo">
+            <img src="img/logo.png" alt="Image can't be loaded">
+            <div class="KFC">K F C</div>
+        </div>
+        <div class="nav">
+            <ul class="list">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Trainers</a></li>
+                <li><a href="#">Classes</a></li>
+                <li><a href="#">Schedules</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="button">
+            <button class="btn">Call Us</button>
+            <button class="btn">Email Us</button>
+        </div>
+        <div class="form">
+            <h2>Join The Best Gym Of Dewas Now</h2>
+            <form onsubmit="return myfun()">
+                    <div class="formGrp">
+                        <input type="text" class="form1" placeholder="Enter your name" id="id1">
+                    </div>
+                    <span id="msg1" style="color: red;"></span>
+                    <div class="formGrp">
+                        <input type="text" class="form1" placeholder="Enter your age" id="id2">
+                    
+                    </div>
+                    <span id="msg2" style="color: red;"></span>
+                    <div class="formGrp">
+                        <input type="text" class="form1" placeholder="Enter your gender" id="id3">
+                    </div>
+                    <span id="msg3" style="color: red;"></span>
+                    <div class="formGrp">
+                        <input type="text" class="form1" placeholder="Enter your locality" id="id4">
+                    </div>
+                    <span id="msg4" style="color: red;"></span>
+                    <button class="btn">Submit</button>
+            </form>
+        </div>
+    </header>
+
+</body>
+</html>
